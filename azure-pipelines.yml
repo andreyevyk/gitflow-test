@@ -1,0 +1,17 @@
+trigger:
+  tags:
+    include:
+      - v*
+  branches:
+    include:
+      - main
+      - dev
+      - feature/*
+      - hotfix/*
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
