@@ -17,5 +17,5 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: echo Hello, tags!
-  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'), contains(variables['Build.SourceBranchName'], 'refs/tags/v'))
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'), contains(variables['Build.SourceBranch'], 'refs/tags/v'))
   displayName: 'Only tagas'
